@@ -10,6 +10,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: normal;
+  padding-bottom: 80px;
   background: url(images/background.jpg) no-repeat;
   background-size: cover;
   -webkit-font-smoothing: antialiased;
@@ -91,6 +92,7 @@ img {
   border: none;
   padding: 15px 15px 15px 50px;
   width: 100%;
+  color: #6c7077;
 }
 
 .header__Search:focus {
@@ -99,11 +101,11 @@ img {
 
 .header__Search-icon {
   color: #6c7077;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 600;
   position: absolute;
-  top: 19px;
-  left: 13px;
+  top: 21px;
+  left: 15px;
 }
 
 .header__Searcher {
@@ -164,6 +166,7 @@ img {
 
 .categories {
   margin-top: 40px;
+  cursor: pointer;
 }
 
 .categories__title {
@@ -174,24 +177,28 @@ img {
   letter-spacing: 1px;
   margin-bottom: 25px;
   margin-left: 40px;
+  margin-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .categories__plus {
   color: #7a866d;
-  position: absolute;
-  top: 0px;
-  left: 230px;
   border: 1px solid;
   font-size: 11px;
   border-radius: 20px;
   width: 20px;
   height: 20px;
   padding-top: 3.3px;
+  padding-left: 1px;
   text-align: center;
-}
-
-.categories__title-warp {
-  position: relative;
 }
 
 .categories__link {
@@ -498,12 +505,22 @@ img {
 
 .More__menu {
   color: #839074;
+  cursor: pointer;
+}
+
+.More__menu:hover {
+  color: #637054;
 }
 
 .More__grid {
   margin-left: auto;
   margin-right: 15px;
   color: #839074;
+  cursor: pointer;
+}
+
+.More__grid:hover {
+  color: #637054;
 }
 
 .More__boxes {
@@ -520,9 +537,23 @@ img {
   margin-right: -5px;
 }
 
+@media (min-width: 1440px) {
+  .More__boxes {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .More__box {
   width: 25%;
   padding: 15px;
+}
+
+@media (min-width: 1440px) {
+  .More__box {
+    max-width: 250px;
+  }
 }
 
 .More__title {
@@ -556,10 +587,249 @@ img {
 }
 
 .More__year {
+  margin-top: 8px;
   display: block;
   text-align: center;
   color: #aeb2b6;
   font-weight: 700;
   font-size: 13px;
+}
+
+.Player {
+  background-image: url(/images/Audrey-Fall-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Player::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #212529;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.Player__content {
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Player__image {
+  width: 80px;
+}
+
+.Player__name {
+  color: #c9cacb;
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.Player__author {
+  font-size: 13px;
+  margin-left: 15px;
+}
+
+.Player__heart {
+  color: #c2c4c7;
+  margin-right: 20px;
+  cursor: pointer;
+  margin-left: 25px;
+}
+
+.Player__heart--full, .Player__heart:hover {
+  color: #f14263;
+}
+
+.Player__creator {
+  color: #85888e;
+  font-weight: 500;
+}
+
+.Player__list {
+  color: #85888e;
+}
+
+.Player__controls {
+  color: #85888e;
+  z-index: 2;
+  position: relative;
+}
+
+.Player__repeat {
+  margin-right: 30px;
+  font-size: 18px;
+}
+
+.Player__prev {
+  margin-right: 30px;
+  font-size: 18px;
+}
+
+.Player__pause {
+  margin-right: 30px;
+  font-size: 20px;
+  border: 1px solid #85888e;
+  border-radius: 50px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 43px;
+  cursor: pointer;
+}
+
+.Player__next {
+  margin-right: 30px;
+  font-size: 18px;
+}
+
+.Player__random {
+  margin-right: 30px;
+  font-size: 18px;
+}
+
+.Player__volume {
+  color: #85888e;
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 15px;
+}
+
+input[type=range] {
+  width: 100%;
+  margin: 4px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: #839074;
+  border: 0px solid rgba(1, 0, 0, 0);
+  border: 0;
+  border-radius: 25px;
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -4px;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #839074;
+}
+
+input[type=range]::-moz-range-track {
+  background: #839074;
+  border: 0px solid rgba(1, 0, 0, 0);
+  border: 0;
+  border-radius: 25px;
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 5px 0;
+  color: transparent;
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #839074;
+  border: 0px solid rgba(1, 0, 0, 0);
+  border: 0;
+  border-radius: 50px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #839074;
+  border: 0px solid rgba(1, 0, 0, 0);
+  border: 0;
+  border-radius: 50px;
+}
+
+input[type=range]::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #839074;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #839074;
+}
+
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align: auto) {
+  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+  input[type=range] {
+    margin: 0;
+    /*Edge starts the margin from the thumb, not the track as other browsers do*/
+  }
 }
 /*# sourceMappingURL=style.css.map */

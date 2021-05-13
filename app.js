@@ -31,7 +31,7 @@ function fadeIn (element, display) {
 
 
 // Nájdeme všetky elementy ktore majú klassu platform-categories
-let menuCategories = document.querySelectorAll(".main-left__platform-categories");
+let menuCategories = document.querySelectorAll(".categories");
 
 // Prejdeme si všetky tieto elementy
 menuCategories.forEach((item) => {
@@ -39,42 +39,18 @@ menuCategories.forEach((item) => {
 	//Ak klikneme na konkretny element
 	item.addEventListener("click", (e) => {
 
-		// Nájdeme si položku ktorá je hneď dalsia
-		let polozky = e.target.nextElementSibling;
+		if ([...e.target.classList].includes("categories__title")) {
+			// Nájdeme si položku ktorá je hneď dalsia
+			let polozky = e.target.nextElementSibling;
 
-		// Skontrolujeme či sú položky schovane
-		if (isHidden(polozky)) {
-			// Ak sú schovane tak zobrazíme
-			fadeIn(polozky, "block");
-			item.classList.add("main-left__platform-categories--active");
-		} else {
-			// Ak sú viditelne tak vypneme
-			fadeOut(polozky);
-			item.classList.remove("main-left__platform-categories--active");
-		}
-	});
-
-});
-
-// Nájdeme všetky elementy ktore majú klassu platform-categories
-let topRated = document.querySelectorAll(".main-right__filters-wrapper");
-
-// Prejdeme si všetky tieto elementy
-topRated.forEach((item) => {
-
-	//Ak klikneme na konkretny element
-	item.addEventListener("click", (e) => {
-
-		// Nájdeme si položku ktorá je hneď dalsia
-		let polozky = document.querySelector(".main-right__filters-item");
-
-		// Skontrolujeme či sú položky schovane
-		if (isHidden(polozky)) {
-			// Ak sú schovane tak zobrazíme
-			fadeIn(polozky, "flex");
-		} else {
-			// Ak sú viditelne tak vypneme
-			fadeOut(polozky);
+			// Skontrolujeme či sú položky schovane
+			if (isHidden(polozky)) {
+				// Ak sú schovane tak zobrazíme
+				fadeIn(polozky, "block");
+			} else {
+				// Ak sú viditelne tak vypneme
+				fadeOut(polozky);
+			}
 		}
 	});
 
