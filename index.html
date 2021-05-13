@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="app.js" defer></script>
+	<title>Spotify</title>
+</head>
+
+<body>
+
+
+	<main class="app">
+
+		<aside class="app__left">
+			<div class="categories">
+				<h3 class="categories__title">Browse music</h3>
+
+				<nav class="categories__navs">
+					<a href="#" class="categories__link"> <i class="categories__icon fas fa-compact-disc"></i> Discover</a>
+					<a href="#" class="categories__link"> <i class="categories__icon fab fa-itunes-note"></i> New Releases</a>
+					<a href="#" class="categories__link"> <i class="categories__icon far fa-chart-bar"></i> Charts</a>
+					<a href="#" class="categories__link"> <i class="categories__icon fas fa-broadcast-tower"></i> Radio</a>
+					<a href="#" class="categories__link"> <i class="categories__icon fas fa-podcast"></i> Podcasts</a>
+				</nav>
+			</div>
+
+			<div class="categories">
+				<h3 class="categories__title">Your Music</h3>
+
+				<nav class="categories__navs">
+					<a href="#" class="categories__link"> <i class="categories__icon fab fa-itunes-note"></i> Songs</a>
+					<a href="#" class="categories__link categories__link--selected"> <i class="categories__icon fas fa-compact-disc"></i> Albums</a>
+					<a href="#" class="categories__link"> <i class="categories__icon fas fa-microphone-alt"></i> Artists</a>
+					<a href="#" class="categories__link"> <i class="categories__icon fas fa-signal"></i> Stations</a>
+				</nav>
+			</div>
+
+			<div class="categories">
+				<div class="categories__title-warp">
+					<h3 class="categories__title">Playlists</h3>
+					<i class="fas fa-plus categories__plus"></i>
+				</div>
+
+				<nav class="categories__navs">
+					<a href="#" class="categories__link"> Summer playlist</a>
+					<a href="#" class="categories__link"> Workout</a>
+					<a href="#" class="categories__link"> All time favorites</a>
+					<a href="#" class="categories__link"> Post Rock</a>
+				</nav>
+			</div>
+		</aside>
+
+		<section class="app__right">
+
+			<header class="header">
+				<div class="header__Searcher">
+					<input class="header__Search" type="text" placeholder="Search...">
+					<i class="fas fa-search header__Search-icon"></i>
+				</div>
+
+				<div class="header__profil h-profile">
+					<span class="h-profile__badge">1</span>
+					<i class="far fa-bell h-profile__bell"></i>
+					<img class="h-profile__image" src="/images/entrepreneur-1.png" alt="">
+					<i class="fas fa-chevron-down h-profile__arrow"></i>
+				</div>
+			</header>
+
+			<div class="album">
+				<img src="/images/Snímka obrazovky 2021-05-12 193919.png" class="album__cover" alt="">
+
+				<div class="album__info">
+					<h1 class="album__title">Mitau</h1>
+					<span class="album__by">By <strong class="album__creator">Audery Fall</strong></span>
+					<span class="album__advance">2014<span class="album__dot">•</span>10 songs<span class="album__dot">•</span>57 min</span>
+					<a href="" class="album__btn album__btn--play"><i class="fas fa-play album__icon album__icon--play"></i> Play</a>
+					<a href="" class="album__btn"><i class="fas fa-random album__icon"></i> Play mix</a>
+					<a href="" class="album__btn album__btn--dot">...</a>
+				</div>
+			</div>
+
+			<div class="songs">
+				<div class="songs__item">
+					<span class="songs__number"><i class="fas fa-play-circle songs__hovericon"></i>1</span>
+					<span class="songs__name songs__name--playing">1944</span>
+					<i class="far fa-chart-bar songs__bar"></i>
+
+					<span class="songs__time">7:23</span>
+					<span class="songs__views">197,206</span>
+
+					<i class="fas fa-heart songs__heart songs__heart--full"></i>
+					<i class="fas fa-ellipsis-v songs__menu"></i>
+				</div>
+
+				<div class="songs__item">
+					<span class="songs__number"><i class="fas fa-play-circle songs__hovericon"></i>2</span>
+					<span class="songs__name">Petrina</span>
+
+					<span class="songs__time">6:25</span>
+					<span class="songs__views">410,780</span>
+
+					<i class="fas fa-heart songs__heart songs__heart--full"></i>
+					<i class="fas fa-ellipsis-v songs__menu"></i>
+				</div>
+
+				<div class="songs__item">
+					<span class="songs__number"><i class="fas fa-play-circle songs__hovericon"></i>3</span>
+					<span class="songs__name">Wolmar</span>
+
+					<span class="songs__time">6:21</span>
+					<span class="songs__views">155,144</span>
+
+					<i class="far fa-heart songs__heart"></i>
+					<i class="fas fa-ellipsis-v songs__menu"></i>
+				</div>
+
+				<div class="songs__item">
+
+					<span class="songs__number"><i class="fas fa-play-circle songs__hovericon"></i>4</span>
+					<span class="songs__name">Driksa</span>
+
+					<span class="songs__time">5:43</span>
+					<span class="songs__views">74,510</span>
+
+					<i class="far fa-heart songs__heart"></i>
+					<i class="fas fa-ellipsis-v songs__menu"></i>
+				</div>
+
+				<div class="songs__item">
+					<span class="songs__number"><i class="fas fa-play-circle songs__hovericon"></i>5</span>
+					<span class="songs__name songs__name">Bermondt</span>
+
+					<span class="songs__time">4:04</span>
+					<span class="songs__views">56,554</span>
+
+					<i class="far fa-heart songs__heart"></i>
+					<i class="fas fa-ellipsis-v songs__menu"></i>
+				</div>
+
+				<div class="songs__item">
+					<span class="songs__number"><i class="fas fa-play-circle songs__hovericon"></i>6</span>
+					<span class="songs__name">Valdeka</span>
+
+					<span class="songs__time">7:52</span>
+					<span class="songs__views">58,773</span>
+
+					<i class="far fa-heart songs__heart"></i>
+					<i class="fas fa-ellipsis-v songs__menu"></i>
+				</div>
+
+				<div class="songs__item">
+					<span class="songs__number"><i class="fas fa-play-circle songs__hovericon"></i>7</span>
+					<span class="songs__name">Eliass</span>
+
+					<span class="songs__time">4:09</span>
+					<span class="songs__views">46,238</span>
+
+					<i class="far fa-heart songs__heart"></i>
+					<i class="fas fa-ellipsis-v songs__menu"></i>
+				</div>
+
+				<div class="songs__item">
+
+					<span class="songs__number"><i class="fas fa-play-circle songs__hovericon"></i>8</span>
+					<span class="songs__name">Courland Aa</span>
+
+					<span class="songs__time">5:44</span>
+					<span class="songs__views">55,132</span>
+
+					<i class="fas fa-heart songs__heart songs__heart--full"></i>
+					<i class="fas fa-ellipsis-v songs__menu"></i>
+				</div>
+
+				<div class="songs__item">
+					<span class="songs__number"><i class="fas fa-play-circle songs__hovericon"></i>9</span>
+					<span class="songs__name">Priboi</span>
+
+					<span class="songs__time">6:33</span>
+					<span class="songs__views">49,824</span>
+
+					<i class="far fa-heart songs__heart"></i>
+					<i class="fas fa-ellipsis-v songs__menu"></i>
+				</div>
+
+				<div class="songs__item">
+
+					<span class="songs__number"><i class="fas fa-play-circle songs__hovericon"></i>10</span>
+					<span class="songs__name">Madem</span>
+
+					<span class="songs__time">3:15</span>
+					<span class="songs__views">52,742</span>
+
+					<i class="fas fa-heart songs__heart songs__heart--full"></i>
+					<i class="fas fa-ellipsis-v songs__menu"></i>
+				</div>
+			</div>
+
+			<div class="More">
+				<div class="More__content">
+					<h3 class="More__title">More from Audery Fall</h3>
+					<i class="fas fa-th-large More__grid"></i>
+					<i class="fas fa-bars More__menu"></i>
+				</div>
+
+				<div class="More__boxes">
+					<div class="More__box">
+						<img class="More__image" src="/images/Snímka obrazovky 2021-05-12 193919.png" alt="">
+						<span class="More__name">Mitau</span>
+						<span class="More__year">2018</span>
+					</div>
+
+					<div class="More__box">
+						<img class="More__image" src="/images/yohanes-dicky-yuniar-CqIBxtOdBGE-unsplash.jpg" alt="">
+						<span class="More__name">Mitau</span>
+						<span class="More__year">2018</span>
+					</div>
+
+					<div class="More__box">
+						<img class="More__image" src="/images/thimo-pedersen-pcwyZk-C4Xk-unsplash.jpg" alt="">
+						<span class="More__name">Mitau</span>
+						<span class="More__year">2018</span>
+					</div>
+
+					<div class="More__box">
+						<img class="More__image" src="/images/podu-stricat-2QzGNSFxLuo-unsplash.jpg" alt="">
+						<span class="More__name">Mitau</span>
+						<span class="More__year">2018</span>
+					</div>
+				</div>
+
+
+			</div>
+
+
+
+		</section>
+
+	</main>
+
+
+</body>
+
+</html>
